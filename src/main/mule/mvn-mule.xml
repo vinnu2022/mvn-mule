@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="mvn-muleFlow" doc:id="5011048a-cf37-493b-8737-7e0ba7eebe42" >
 		<http:listener doc:name="Listener" doc:id="ea23b3ad-03ba-4e01-9652-5b6fd5e6da8c" config-ref="HTTP_Listener_config" path="/mvnplugin"/>
-		<set-payload value='#["message":"cicd using mvn pulgin"]' doc:name="Set Payload" doc:id="cb24058d-3e2e-48ce-b9d6-8276960b98a7" />
+		<set-payload value='#["message":"cicd using mvn pulgin BY vinaykumar Theetla"]' doc:name="Set Payload" doc:id="cb24058d-3e2e-48ce-b9d6-8276960b98a7" />
 		<ee:transform doc:name="Transform Message" doc:id="e81d18c1-3ca3-4630-8daf-521ac76479b7" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0

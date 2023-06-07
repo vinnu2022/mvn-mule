@@ -24,26 +24,26 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.0.0</version>
 			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-      <cloudHubDeployment>
-      <uri>https://anypoint.mulesoft.com</uri>
-         <username>Vinaynov2022</username>
-         <password>Vinaynov2022</password>         
-         <workers>1</workers>
-         <workerType>MICRO</workerType>
-         <region>us-east-1</region>
-         <environment>Sandbox</environment>
-         <muleVersion>${app.runtime}</muleVersion>
-         <objectStoreV2>true</objectStoreV2>
-         <applicationName>mvn-mule</applicationName>
-      </cloudHubDeployment>
-      </configuration>
-			</plugin>
+			plugin>
+    <groupId>org.mule.tools.maven</groupId>
+    <artifactId>mule-maven-plugin</artifactId>
+    <version>${mule.maven.plugin.version}</version>
+    <extensions>true</extensions>
+    <configuration>
+        <cloudHubDeployment>
+            <uri>https://anypoint.mulesoft.com</uri>
+            <muleVersion>${mule.version}</muleVersion>
+            <username>${anypoint.username}</username>
+            <password>${anypoint.password}</password>
+            <environment>${env}</environment>
+            <applicationName>${appname}</applicationName>
+            <businessGroup>${business}</businessGroup>
+            <workerType>${vCore}</workerType>
+            <workers>${workers}</workers>
+            <objectStoreV2>true</objectStoreV2>
+        </cloudHubDeployment>
+    </configuration>
+</plugin>
 		</plugins>
 	</build>
 
